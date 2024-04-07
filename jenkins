@@ -1,0 +1,8 @@
+yum install epel-release -y
+yum install wget net-tools bind-utils vim -y
+yum install java-11-openjdk -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install jenkins -y 
+systemctl enable jenkins --now
+systemctl status jenkins
