@@ -2,7 +2,7 @@ yum install epel-release -y
 yum install wget net-tools bind-utils vim -y 
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo 
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 systemctl enable docker -now
 systemctl status docker 
 chmod 777 /run/docker.sock
